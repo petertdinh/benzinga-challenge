@@ -10,6 +10,7 @@ class SearchBar extends Component {
 	}
 
 	handleSubmit = (e, symbol) => {
+		console.log(this.state.symbol);
 		e.preventDefault();
 		this.setState({symbol: ''});
 		this.props.getStock(symbol);
@@ -21,7 +22,7 @@ class SearchBar extends Component {
 				<div className="title">Simple Stock Exchange</div>
 				<form onSubmit={(e) => this.handleSubmit(e, this.state.symbol)}>
 					<div className="search">
-						<input className="search-input" placeholder="Enter Symbol" value={this.state.symbol} onChange={(e) => { this.setState({symbol: e.target.value})}}></input>
+						<input className="search-input" placeholder="Enter Symbol" value={this.state.symbol} onChange={(e) => { this.setState({symbol: e.target.value.toUpperCase()})}}></input>
 						<button>Lookup</button>
 					</div>
 				</form>
