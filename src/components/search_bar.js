@@ -10,7 +10,6 @@ class SearchBar extends Component {
 	}
 
 	handleSubmit = (e, symbol) => {
-		console.log(this.state.symbol);
 		e.preventDefault();
 		this.setState({symbol: ''});
 		this.props.getStock(symbol);
