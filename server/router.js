@@ -15,6 +15,10 @@ module.exports = (app) => {
 		res.sendFile(path.resolve(__dirname + '/../style/style.css'));
 	});
 
+	app.get('/favicon.ico', (req, res) => {
+		res.sendFile(path.resolve(__dirname + '/../style/favicon.ico'));
+	});
+
 	app.post('/stock', (req, res) => {
 		axios.get(`http://data.benzinga.com/rest/richquoteDelayed?symbols=${req.body.symbol}`)
 			.then((company) => {
