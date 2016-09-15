@@ -1,0 +1,130 @@
+.container {
+	width: 800px;
+	height: 500px;
+}
+
+.order-book {
+	color: white;
+}
+
+.title {
+	background-color: #FF8C00;
+	border-color: black;
+	border-radius: 5px;
+	font-family: 'Passion One', cursive;
+	margin-right: 43%;
+	font-size: 22px;
+	margin: 5px 43% 0 0;
+	padding: 0 2px 0 2px;
+}
+
+.parent {
+	display: flex;
+	flex-direction: column;
+}
+
+.order-book {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.search-bar {
+	display: flex;
+	flex: 1;
+}
+
+.search-input {
+	width: 50%;
+	margin-right: 5px;
+}
+
+.bid-ask {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1em;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.5em;
+}
+
+.stock {
+	justify-content: center;
+	margin: 2em 0 1.5em 0;
+	text-align: center;
+	font-size: 2em;
+	font-family: 'Vollkorn', serif;
+	max-height: 48px;
+	max-width: 302.95px;
+}
+
+.transaction {
+	display: flex;
+}
+
+.qty {
+  padding-top: .75em;
+  margin-right: .75em;
+}
+
+.stocks {
+	justify-content: space-around;
+	max-height: 196px;
+	overflow-y: auto
+}
+
+.empty-stock {
+	visibility: hidden;
+}
+
+.portfolio {
+	text-align: center;
+	width: 50%;
+	max-height: 276px
+	height: 276px;
+}
+
+.stock-index {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid grey;
+}
+
+.company, .company-header, .shares {
+	width: 7.5em;
+}
+
+.shares, .price-paid {
+	align-self: center;
+}
+
+.price-paid {
+	width: 55px;
+}
+
+.portfolio-header {
+	display: flex;
+	justify-content: space-between;
+	text-decoration: underline;
+}
+
+.shares-header {
+	margin-left: 1em;
+}
+
+.search {
+	margin-right: -40%;
+	margin-top: 4px;
+}
+
+.current-portfolio, .cash {
+	margin-left: 14%;
+}
+
+.container {
+	max-height: 306px;
+  background: #042B45; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#042B45, #0A5E82); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#042B45, #0A5E82); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#042B45, #0A5E82); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#042B45, #0A5E82); /* Standard syntax */
+}
