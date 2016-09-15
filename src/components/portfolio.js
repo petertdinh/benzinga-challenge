@@ -7,9 +7,10 @@ import _ from 'lodash';
 class Portfolio extends Component {
 	render() {
 
-  	const stocks = _.map(this.props.stocksInPortfolio, (stock) => {
+  	const stocks = _.map(this.props.stocksInPortfolio, (stock, index) => {
   		if(stock.qty > 0) {
-	  		return <StockIndex 
+	  		return <StockIndex
+	  						key={index}
 	  						company={stock.name}
 	  						quantity={stock.qty}
 	  						price={stock.price} />
