@@ -2,7 +2,7 @@
   "name": "redux-simple-starter",
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
-  "engines" : {
+  "engines": {
     "node": "4.4.3"
   },
   "main": "index.js",
@@ -29,6 +29,7 @@
     "axios": "^0.14.0",
     "babel-preset-stage-1": "^6.1.18",
     "body-parser": "^1.15.2",
+    "express": "^4.14.0",
     "lodash": "^3.10.1",
     "numeral": "^1.5.3",
     "react": "^0.14.3",
