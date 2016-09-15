@@ -1,13 +1,14 @@
 'use strict';
 const path = require('path');
 const axios = require('axios');
+const express = require('express');
 
 module.exports = (app) => {
+	app.use(express.static(path.join(__dirname, '../src')));
+
 	app.get('/', (req, res) => {
 	  res.sendFile(path.resolve(__dirname + '/../index.html'));
 	});
-
-	app.use(express.static(path.join(__dirname, '../src')));
 
 	app.get('/bundle.js', (req, res) => {
 	  res.sendFile(path.resolve(__dirname + '/../bundle.js'));
