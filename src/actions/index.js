@@ -13,18 +13,14 @@ export const getStock = (symbol) => {
 	}
 }
 
-export const buyStock = (qty, price, stock) => {
+export const buyStock = (stock) => {
 	return (dispatch) => {
-		stock.qty = qty;
-		stock.price = price;
 		dispatch({type: TYPES.BUY_STOCK, payload: stock, symbol: stock.symbol, price});
 	}
 }
 
-export const sellStock = (qty, price, stock) => {
+export const sellStock = (stock) => {
 	return (dispatch) => {
-		stock.qty = qty;
-		stock.price = price;
 		dispatch({type: TYPES.SELL_STOCK, payload: stock, symbol: stock.symbol, price});
 	}
 }

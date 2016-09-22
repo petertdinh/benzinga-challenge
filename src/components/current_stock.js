@@ -20,7 +20,8 @@ class CurrentStock extends Component {
 		if(this.props.stock.name) {
 			if(this.props.cash - (this.state.quantity*this.props.ask) > 0) {
 				this.setState({quantity: 0});
-				this.props.buyStock(this.state.quantity, this.props.ask, this.props.stock);
+				const stockPayload = {...this.props.stock, qty: this.state.quantity, price: this.props.ask};
+				this.props.buyStock(stockPayload);
 			} else {
 				alert(`You don't have enough money to make this purchase! Please re-adjust the quantity.`);
 			}
@@ -34,7 +35,8 @@ class CurrentStock extends Component {
 		if(this.props.stock.name) {
 			if(this.props.stocksInPortfolio[this.props.stock.symbol] && this.props.stocksInPortfolio[this.props.stock.symbol].qty >= this.state.quantity) {
 				this.setState({quantity: 0});
-				this.props.sellStock(this.state.quantity, this.props.bid, this.props.stock);
+				const stockPayload = {...this.props.stock, qty: this.state.quantity, price: this.props.bid};
+				this.props.sellStock(stockPayload);
 			} else {
 				alert(`You don't have that many shares to sell! Please re-adjust the quantity.`);
 			}
